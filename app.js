@@ -1,1 +1,13 @@
-console.log("hello world");
+const width = 10;
+const height = 5;
+const space = width * height;
+console.log (space);
+const newWidth = width - 5;
+console.log (newWidth);
+const newHeight = width + height;
+console.log (newHeight);
+const division = width / height;
+console.log (division);
+const city = 'Subotica';
+const street = 'Brache Radicha';
+console.log (city + ", " + street);
