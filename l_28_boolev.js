@@ -26,5 +26,8 @@ const username = a || "Vanya";
 console.log (username); //подставить поумолчанию Второй если первого нет
 
 const admin = true;
-const fileName = admin && "file.mp4";
+const fileName = admin && "file.mp4"; //проверить условие перед выведением данных
 console.log (fileName);
+
+let age = 0;
+console.log (age ?? 18); //безопасно и корректно для проверки прав
