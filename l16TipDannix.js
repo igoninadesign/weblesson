@@ -4,7 +4,7 @@ let b = 5.6;
 console.log (typeof a); //вывести тип данных
 console.log (typeof b);
 
-a = "stroka" 
+a = "stroka";
 console.log (typeof a);
 
 let isAdmin = a > 10; //true falls булевые значения-когда чтото сравнивается
