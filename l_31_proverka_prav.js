@@ -21,4 +21,3 @@ console.log (`могу купить игру ${
     canBuy ? "Да" : "Нет"
 }`)
 
-console.log(true && 'd' ?? '')
