@@ -22,7 +22,7 @@ users [2]= 'marina'// для замены элемента внутри масс
 console.log (users); //не можем перезаписать весь массив если он константа
 
 //управление элементами массива
-users.push('nick');//метод добавления элемента
+users.push('nick');//метод добавления элемента в конец
 console.log (users);
 
 users.unshift('lola'); //для добавления в начало
@@ -112,4 +112,30 @@ const data = [1, 2, 3, 4, 5, 6, 7, 8];
 const[one, two, ...others] = data; //...это вызывает rest
 console.log(one,two,others); //1 2 (6) [3, 4, 5, 6, 7, 8]
 
+/*дан произвольный урл 
+https://purpleschool.ru/course/javascript
+нужно сделать функцию которая выводит в консоль
+- протокол https
+- доменное имя purpleschool.ru
+- путь внутрі сайта course/javascript
+*/
 
+const url2 = 'https://purpleschool.ru/course/javascript';
+const mas = url2.split('/');
+console.log (mas); //(5) ['https:', '', 'purpleschool.ru', 'course', 'javascript']
+mas.splice(1,1);
+const [protocol, domen, ...inSite] = mas;
+console.log(protocol, domen, '/'+ inSite.join('/')); //https: purpleschool.ru course/javascript
+
+//вариант коуча
+const url3 = 'https://purpleschool.ru/course/javascript';
+function getUrlPaths(url3){
+    const[protocol, _, host, ...path]= url3.split('/');
+    if (protocol === 'https:' || protocol === 'http:') { //защита на правильный формат данных
+        console.log(protocol, _, host, ...path);
+        console.log(`Протокол: ${protocol.split(':')[0]}`);
+        console.log(`Доменное имя ${host}`);
+        console.log(`Путь внутри сайта  /${path.join('/')}`);
+    }
+}
+getUrlPaths(url3)
