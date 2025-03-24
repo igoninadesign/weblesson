@@ -37,6 +37,13 @@ console.log(power(5)(4)) //первое степень, а второе числ
 function a(num, b) {
     return b(num);
 }
-console.log(a(1, (n) => n + 5));
+console.log(a(1, (n) => n + 5) );
 
+function a (num, a) {
+    return a(num)
+}
+
+a(1, function() {
+    console.log(num + 5);
+})
 
